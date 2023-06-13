@@ -3,22 +3,12 @@ import typer
 from sqlalchemy import text
 
 from config.db import get_db_session
-from config.env import BASE_DIR
 
+from .commands.init import init_cli
 
 db_commands = typer.Typer()
 
-
-@db_commands.command()
-def init(file: str = f"{BASE_DIR}/sql/schema.sql") -> None:
-    session = get_db_session()
-
-    with open(file, "r") as f:
-        stmts = f.read().split(";")
-
-    for stmt in stmts:
-        session.execute(text(stmt.strip()))
-        session.commit()
+db_commands.add_typer(init_cli, name="init")
 
 
 @db_commands.command()

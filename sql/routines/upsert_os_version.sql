@@ -39,4 +39,4 @@ begin
                 do update set percentage = _percentage;
         end loop;
 end;
-$$;
+$$

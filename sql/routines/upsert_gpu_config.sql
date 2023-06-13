@@ -45,4 +45,4 @@ begin
 
         end loop;
 end;
-$$;
+$$

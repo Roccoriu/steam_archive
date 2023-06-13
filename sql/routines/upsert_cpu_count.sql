@@ -30,4 +30,4 @@ begin
 
         end loop;
 end;
-$$;
+$$

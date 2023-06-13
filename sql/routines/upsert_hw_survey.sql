@@ -22,4 +22,4 @@ begin
     perform steam.upsert_cpu_count(_hw_survey_id, _cpu_counts);
     perform steam.upsert_gpu_config(_hw_survey_id, _gpu_configs);
 end;
-$$;
+$$
