@@ -45,3 +45,10 @@ def views(
     session = get_db_session()
 
     pass
+
+
+@init_cli.command()
+def all() -> None:
+    schema()
+    routines()
+    views()

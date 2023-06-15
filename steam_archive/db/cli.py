@@ -4,16 +4,12 @@ from sqlalchemy import text
 
 from config.db import get_db_session
 
-from .commands.init import init_cli
+from .commands import init_cli, seed_cli
 
 db_commands = typer.Typer()
 
 db_commands.add_typer(init_cli, name="init")
-
-
-@db_commands.command()
-def seed() -> None:
-    print("seed the db with some data from the data folder")
+db_commands.add_typer(seed_cli, name="seed")
 
 
 @db_commands.command()
