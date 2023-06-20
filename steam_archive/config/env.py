@@ -10,6 +10,8 @@ class Config(BaseSettings):
         env_file = f"{BASE_DIR}/.env"
         env_file_encoding = "utf-8"
 
+    LOG_LEVEL: str = "DEBUG"
+
     DB_CONNECTION_STRING: str
 
     DEFAULT_ROUTINE_FILES = [

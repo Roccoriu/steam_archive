@@ -1,4 +1,6 @@
+import re
 import json
+
 from pprint import pprint
 from pydantic import BaseModel, Field
 
@@ -60,16 +62,17 @@ def clean_os_version(
 
 
 def clean_windows_version(
-    windows_version: list[str],
+    windows_version: str,
     percentage: float,
-) -> dict[str, str]:
+) -> dict[str, str | float]:
+    pattern = (
+        r"(\bXP|\b98|\b95|\b2000|\b2003|\bMe|\b7|\bVista)\s?(SP \d|\(Build \d+\))?"
+    )
     cleaned: dict[str, str | float] = {}
 
     cleaned["os"] = "Windows"
     cleaned["version"] = (
-        windows_version[0:3]
-        if "64" or "32" in windows_version[0:3]
-        else windows_version[0]
+        os.group() if (os := re.search(pattern, windows_version)) else "N/A"
     )
     cleaned["architecture"] = "64" if "64" in windows_version else "32"
     cleaned["percentage"] = percentage
@@ -93,14 +96,10 @@ def data(input_file: str = f"{BASE_DIR}/data/survey_data_combined.json") -> None
             )
 
         if os := i.get("Windows Version"):
-            print(
-                list(
-                    map(
-                        lambda x, y: clean_windows_version(x.split(" "), y),
-                        os.keys(),
-                        os.values(),
-                    )
-                )
+            data["os"] = map(
+                lambda x, y: clean_windows_version(x, y),
+                os.keys(),
+                os.values(),
             )
 
         # print(data.get("os"))

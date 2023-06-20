@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
+import sys
+
 import typer
 
-from db.cli import db_commands
+from loguru import logger
+
+from cli.db import db_commands
+from config.env import config
+
+logger.remove()
+logger.add(sys.stderr, level=config.LOG_LEVEL.upper())
 
 cli = typer.Typer()
 
