@@ -11,7 +11,7 @@ declare
     _os            varchar(255);
     _version       varchar(255);
     _architecture  varchar(255);
-    _percentage    decimal(5, 2);
+    _percentage    decimal(10, 2);
 begin
     for i in 1..array_length(_os_versions, 1)
         loop
@@ -19,7 +19,7 @@ begin
             _os := steam.get_jsonb_value(_os_version, 'os');
             _version := steam.get_jsonb_value(_os_version, 'version');
             _architecture := steam.get_jsonb_value(_os_version, 'architecture');
-            _percentage := steam.get_jsonb_value(_os_version, 'percentage')::decimal(5, 2);
+            _percentage := steam.get_jsonb_value(_os_version, 'percentage')::decimal(10, 2);
 
             select id
             into _os_version_id
@@ -30,7 +30,7 @@ begin
 
             if _os_version_id is null then
                 insert into steam.osversion(os, version, architecture)
-                values (_os, _version, _architecture);
+                values (_os, _version, _architecture) returning id into _os_version_id;
             end if;
 
             insert into steam.hw_survey_os_version(hw_survey_id, os_version_id, percentage)

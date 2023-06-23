@@ -9,18 +9,19 @@ declare
     _cpu_count_id bigint;
     _cpu_count    jsonb;
     _count        int;
-    _percentage   decimal(5, 2);
+    _percentage   decimal(10, 2);
 begin
     for i in 1..array_length(_cpu_counts, 1)
         loop
             _cpu_count := _cpu_counts[i];
             _count := steam.get_jsonb_value(_cpu_count, 'cpu_count');
+            _percentage := steam.get_jsonb_value(_cpu_count, 'percentage')::decimal(10, 2);
 
             select id into _cpu_count_id from steam.cpucount where count = _count;
 
             if _cpu_count_id is null then
                 insert into steam.cpucount(count)
-                values (_count);
+                values (_count) returning id into _cpu_count_id;
             end if;
 
             insert into steam.hw_survey_cpu_count(hw_survey_id, cpu_count_id, percentage)

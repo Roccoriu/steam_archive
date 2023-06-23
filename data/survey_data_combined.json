@@ -13,7 +13,7 @@
     },
     "RAM": {
       "Less than 24 Mb": 0.0,
-      ">=24 Mb to &lt32 Mb": 0.01,
+      "24 Mb to 32 Mb": 0.01,
       "32 Mb to 64 Mb": 0.31,
       "64 Mb to 96 Mb": 0.16,
       "96 Mb to 128 Mb": 3.95,
@@ -25,7 +25,7 @@
     },
     "CPU": {
       "Below 200 Mhz": 0.01,
-      ">=200 Mhz to &lt300 Mhz": 0.08,
+      "200 Mhz to 300 Mhz": 0.08,
       "300 Mhz to 400 Mhz": 0.41,
       "400 Mhz to 500 Mhz": 1.06,
       "500 Mhz to 600 Mhz": 1.27,
@@ -258,7 +258,7 @@
     },
     "RAM": {
       "Less than 24 Mb": 0.0,
-      ">=24 Mb to &lt32 Mb": 0.02,
+      "24 Mb to 32 Mb": 0.02,
       "32 Mb to 64 Mb": 0.43,
       "64 Mb to 96 Mb": 0.23,
       "96 Mb to 128 Mb": 4.57,
@@ -270,7 +270,7 @@
     },
     "CPU": {
       "Below 200 Mhz": 0.02,
-      ">=200 Mhz to &lt300 Mhz": 0.11,
+      "200 Mhz to 300 Mhz": 0.11,
       "300 Mhz to 400 Mhz": 0.47,
       "400 Mhz to 500 Mhz": 1.17,
       "500 Mhz to 600 Mhz": 1.39,
@@ -513,7 +513,7 @@
     },
     "RAM": {
       "Less than 24 Mb": 0.0,
-      ">=24 Mb to &lt32 Mb": 0.02,
+      "24 Mb to 32 Mb": 0.02,
       "32 Mb to 64 Mb": 0.43,
       "64 Mb to 96 Mb": 0.23,
       "96 Mb to 128 Mb": 4.57,
@@ -525,7 +525,7 @@
     },
     "CPU": {
       "Below 200 Mhz": 0.02,
-      ">=200 Mhz to &lt300 Mhz": 0.11,
+      "200 Mhz to 300 Mhz": 0.11,
       "300 Mhz to 400 Mhz": 0.47,
       "400 Mhz to 500 Mhz": 1.17,
       "500 Mhz to 600 Mhz": 1.39,
@@ -768,7 +768,7 @@
     },
     "RAM": {
       "Less than 24 Mb": 0.0,
-      ">=24 Mb to &lt32 Mb": 0.02,
+      "24 Mb to 32 Mb": 0.02,
       "32 Mb to 64 Mb": 0.43,
       "64 Mb to 96 Mb": 0.23,
       "96 Mb to 128 Mb": 4.57,
@@ -780,7 +780,7 @@
     },
     "CPU": {
       "Below 200 Mhz": 0.02,
-      ">=200 Mhz to &lt300 Mhz": 0.11,
+      "200 Mhz to 300 Mhz": 0.11,
       "300 Mhz to 400 Mhz": 0.47,
       "400 Mhz to 500 Mhz": 1.17,
       "500 Mhz to 600 Mhz": 1.39,
@@ -1023,7 +1023,7 @@
     },
     "RAM": {
       "Less than 24 Mb": 0.0,
-      ">=24 Mb to &lt32 Mb": 0.02,
+      "24 Mb to 32 Mb": 0.02,
       "32 Mb to 64 Mb": 0.43,
       "64 Mb to 96 Mb": 0.23,
       "96 Mb to 128 Mb": 4.57,
@@ -1035,7 +1035,7 @@
     },
     "CPU": {
       "Below 200 Mhz": 0.02,
-      ">=200 Mhz to &lt300 Mhz": 0.11,
+      "200 Mhz to 300 Mhz": 0.11,
       "300 Mhz to 400 Mhz": 0.47,
       "400 Mhz to 500 Mhz": 1.17,
       "500 Mhz to 600 Mhz": 1.39,
@@ -1278,7 +1278,7 @@
     },
     "RAM": {
       "Less than 24 Mb": 0.0,
-      ">=24 Mb to &lt32 Mb": 0.0,
+      "24 Mb to 32 Mb": 0.0,
       "32 Mb to 64 Mb": 0.11,
       "64 Mb to 96 Mb": 0.08,
       "96 Mb to 128 Mb": 1.86,
@@ -1290,7 +1290,7 @@
     },
     "CPU": {
       "Below 200 Mhz": 0.01,
-      ">=200 Mhz to &lt300 Mhz": 0.03,
+      "200 Mhz to 300 Mhz": 0.03,
       "300 Mhz to 400 Mhz": 0.19,
       "400 Mhz to 500 Mhz": 0.53,
       "500 Mhz to 600 Mhz": 0.71,
@@ -1593,7 +1593,7 @@
     },
     "RAM": {
       "Less than 24 Mb": 0.0,
-      ">=24 Mb to &lt32 Mb": 0.01,
+      "24 Mb to 32 Mb": 0.01,
       "32 Mb to 64 Mb": 0.16,
       "64 Mb to 96 Mb": 0.11,
       "96 Mb to 128 Mb": 2.15,
@@ -1605,7 +1605,7 @@
     },
     "CPU": {
       "Below 200 Mhz": 0.01,
-      ">=200 Mhz to &lt300 Mhz": 0.04,
+      "200 Mhz to 300 Mhz": 0.04,
       "300 Mhz to 400 Mhz": 0.23,
       "400 Mhz to 500 Mhz": 0.6,
       "500 Mhz to 600 Mhz": 0.76,
@@ -1921,7 +1921,7 @@
     },
     "RAM": {
       "Less than 24 Mb": 0.0,
-      ">=24 Mb to &lt32 Mb": 0.01,
+      "24 Mb to 32 Mb": 0.01,
       "32 Mb to 64 Mb": 0.15,
       "64 Mb to 96 Mb": 0.11,
       "96 Mb to 128 Mb": 1.84,
@@ -1933,7 +1933,7 @@
     },
     "CPU": {
       "Below 200 Mhz": 0.01,
-      ">=200 Mhz to &lt300 Mhz": 0.04,
+      "200 Mhz to 300 Mhz": 0.04,
       "300 Mhz to 400 Mhz": 0.21,
       "400 Mhz to 500 Mhz": 0.51,
       "500 Mhz to 600 Mhz": 0.64,
@@ -2267,7 +2267,7 @@
     },
     "RAM": {
       "Less than 24 Mb": 0.0,
-      ">=24 Mb to &lt32 Mb": 0.01,
+      "24 Mb to 32 Mb": 0.01,
       "32 Mb to 64 Mb": 0.15,
       "64 Mb to 96 Mb": 0.11,
       "96 Mb to 128 Mb": 1.84,
@@ -2279,7 +2279,7 @@
     },
     "CPU": {
       "Below 200 Mhz": 0.01,
-      ">=200 Mhz to &lt300 Mhz": 0.04,
+      "200 Mhz to 300 Mhz": 0.04,
       "300 Mhz to 400 Mhz": 0.21,
       "400 Mhz to 500 Mhz": 0.51,
       "500 Mhz to 600 Mhz": 0.64,
@@ -2612,7 +2612,7 @@
     },
     "RAM": {
       "Less than 24 Mb": 0.0,
-      ">=24 Mb to &lt32 Mb": 0.01,
+      "24 Mb to 32 Mb": 0.01,
       "32 Mb to 64 Mb": 0.15,
       "64 Mb to 96 Mb": 0.11,
       "96 Mb to 128 Mb": 1.84,
@@ -2624,7 +2624,7 @@
     },
     "CPU": {
       "Below 200 Mhz": 0.01,
-      ">=200 Mhz to &lt300 Mhz": 0.04,
+      "200 Mhz to 300 Mhz": 0.04,
       "300 Mhz to 400 Mhz": 0.21,
       "400 Mhz to 500 Mhz": 0.51,
       "500 Mhz to 600 Mhz": 0.64,
@@ -2956,7 +2956,7 @@
       "1,024.0 Kbps": 32.09
     },
     "RAM": {
-      ">=24 Mb to &lt32 Mb": 0.0,
+      "24 Mb to 32 Mb": 0.0,
       "32 Mb to 64 Mb": 0.04,
       "64 Mb to 96 Mb": 0.02,
       "96 Mb to 128 Mb": 0.78,
@@ -2969,7 +2969,7 @@
     },
     "CPU": {
       "Below 200 Mhz": 0.0,
-      ">=200 Mhz to &lt300 Mhz": 0.01,
+      "200 Mhz to 300 Mhz": 0.01,
       "300 Mhz to 400 Mhz": 0.09,
       "400 Mhz to 500 Mhz": 0.24,
       "500 Mhz to 600 Mhz": 0.35,
@@ -3212,7 +3212,7 @@
       "1,024.0 Kbps": 31.07
     },
     "RAM": {
-      ">=24 Mb to &lt32 Mb": 0.0,
+      "24 Mb to 32 Mb": 0.0,
       "32 Mb to 64 Mb": 0.06,
       "64 Mb to 96 Mb": 0.04,
       "96 Mb to 128 Mb": 0.94,
@@ -3225,7 +3225,7 @@
     },
     "Intel CPU Speeds": {
       "Below 200 Mhz": 0.0,
-      ">=200 Mhz to &lt300 Mhz": 0.02,
+      "200 Mhz to 300 Mhz": 0.02,
       "300 Mhz to 400 Mhz": 0.1,
       "400 Mhz to 500 Mhz": 0.27,
       "500 Mhz to 600 Mhz": 0.35,
@@ -3249,7 +3249,7 @@
     },
     "AMD CPU Speeds": {
       "Below 200 Mhz": 0.0,
-      ">=200 Mhz to &lt300 Mhz": 0.0,
+      "200 Mhz to 300 Mhz": 0.0,
       "300 Mhz to 400 Mhz": 0.01,
       "400 Mhz to 500 Mhz": 0.02,
       "500 Mhz to 600 Mhz": 0.04,
@@ -3503,7 +3503,7 @@
       "1,024.0 Kbps": 31.02
     },
     "RAM": {
-      ">=24 Mb to &lt32 Mb": 0.0,
+      "24 Mb to 32 Mb": 0.0,
       "32 Mb to 64 Mb": 0.06,
       "64 Mb to 96 Mb": 0.04,
       "96 Mb to 128 Mb": 0.95,
@@ -3516,7 +3516,7 @@
     },
     "Intel CPU Speeds": {
       "Below 200 Mhz": 0.0,
-      ">=200 Mhz to &lt300 Mhz": 0.02,
+      "200 Mhz to 300 Mhz": 0.02,
       "300 Mhz to 400 Mhz": 0.1,
       "400 Mhz to 500 Mhz": 0.27,
       "500 Mhz to 600 Mhz": 0.36,
@@ -3540,7 +3540,7 @@
     },
     "AMD CPU Speeds": {
       "Below 200 Mhz": 0.0,
-      ">=200 Mhz to &lt300 Mhz": 0.0,
+      "200 Mhz to 300 Mhz": 0.0,
       "300 Mhz to 400 Mhz": 0.01,
       "400 Mhz to 500 Mhz": 0.02,
       "500 Mhz to 600 Mhz": 0.04,
@@ -3795,7 +3795,7 @@
       "1,024.0 Kbps": 31.02
     },
     "RAM": {
-      ">=24 Mb to &lt32 Mb": 0.0,
+      "24 Mb to 32 Mb": 0.0,
       "32 Mb to 64 Mb": 0.06,
       "64 Mb to 96 Mb": 0.04,
       "96 Mb to 128 Mb": 0.95,
@@ -3808,7 +3808,7 @@
     },
     "Intel CPU Speeds": {
       "Below 200 Mhz": 0.0,
-      ">=200 Mhz to &lt300 Mhz": 0.02,
+      "200 Mhz to 300 Mhz": 0.02,
       "300 Mhz to 400 Mhz": 0.1,
       "400 Mhz to 500 Mhz": 0.27,
       "500 Mhz to 600 Mhz": 0.36,
@@ -3832,7 +3832,7 @@
     },
     "AMD CPU Speeds": {
       "Below 200 Mhz": 0.0,
-      ">=200 Mhz to &lt300 Mhz": 0.0,
+      "200 Mhz to 300 Mhz": 0.0,
       "300 Mhz to 400 Mhz": 0.01,
       "400 Mhz to 500 Mhz": 0.02,
       "500 Mhz to 600 Mhz": 0.04,

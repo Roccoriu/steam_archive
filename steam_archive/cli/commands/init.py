@@ -1,10 +1,10 @@
 from loguru import logger
 import typer
 
+import util
 from config.env import BASE_DIR
 from config.db import get_db_session
 from config.env import config
-from cli import util
 
 init_cli = typer.Typer()
 
