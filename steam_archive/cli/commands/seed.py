@@ -13,6 +13,12 @@ seed_cli = typer.Typer()
 
 @seed_cli.command()
 def data(input_file: str = f"{BASE_DIR}/data/survey_data_combined.json") -> None:
+    """
+    Seed the database with data from a JSON file. The default file is
+    `data/survey_data_combined.json`. --input-file can be used to specify a
+    different file.
+    """
+
     with open(input_file, "r") as f:
         data_file = json.load(f)
 
@@ -46,6 +52,8 @@ def data(input_file: str = f"{BASE_DIR}/data/survey_data_combined.json") -> None
         if cores := i.get("Physical CPUs"):
             data["cores"] = map(util.clean_cores, cores.keys(), cores.values())
 
+        ## TODO: instead of running the util.convert_to_pg_array() function
+        ## multiple times, we should do this directly in the map() statements above
         if data.get("vga") and data.get("os") and data.get("ram") and data.get("cores"):
             util.exec_sql(
                 db,

@@ -1,6 +1,6 @@
 import sys
 import json
-from typing import Any
+from typing import Any, Iterable
 
 from loguru import logger
 
@@ -9,7 +9,11 @@ from sqlalchemy.orm import Session
 from sqlalchemy.exc import OperationalError
 
 
-def exec_sql(db: Session, stmt: str, params: dict = {}) -> Result[Any] | None:
+def exec_sql(
+    db: Session,
+    stmt: str,
+    params: dict = {},
+) -> Result[Any] | None:
     try:
         res = db.execute(text(stmt.strip()), params)
         logger.debug(f"Executed SQL statement:\n{stmt}")
@@ -24,9 +28,5 @@ def exec_sql(db: Session, stmt: str, params: dict = {}) -> Result[Any] | None:
         sys.exit(1)
 
 
-def convert_to_pg_array(items: Any):
-    # py_list is a list of Python dicts representing JSON objects
-    # convert each dict to a JSON string
-    json_str_list = [json.dumps(item) for item in items]
-    # convert the list of JSON strings to a string representing a PostgreSQL array
-    return json_str_list
+def convert_to_pg_array(items: Iterable):
+    return [json.dumps(item) for item in items]
