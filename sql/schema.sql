@@ -121,3 +121,4 @@ CREATE TABLE IF NOT EXISTS steam.Hw_Survey_Cpu_Count
         REFERENCES steam.CpuCount (id)
         ON DELETE CASCADE ON UPDATE CASCADE
 );
+
