@@ -7,32 +7,21 @@ Replace the `change_me` with your actual postgres credentials.
 
 There are two cases which might apply to you:
 
-1. You have a running postgres server and can run a create db statement
+1. you have a running postgres server and use the cli to create it
 2. you use a docker container for your database
 
 <br/>
 
 ### 1. Create the database with a running postgres server
 
-Start a postgres shell on your server. Alternatively you can use pgAdmin for this.
+if you have a running postgres server, you can create the database with the following command:
 
 ```bash
-psql -U postgres
-```
+# using the python cli (recommended)
+./main.py db create -h <host> -p <password> -d <dbname> -s <ssh_username> -P <ssh_password> [-u <username>]
 
-Now create the database with the following statement. This will create a database called `steam_archive` with the owner `postgres`.
-
-```sql
-CREATE DATABASE steam_archive
-    WITH
-    OWNER = postgres
-    ENCODING = 'UTF8'
-    LC_COLLATE = 'en_GB.UTF-8'
-    LC_CTYPE = 'en_GB.UTF-8'
-    TABLESPACE = pg_default
-    CONNECTION LIMIT = -1
-    IS_TEMPLATE = False;
-
+# using the create_db.sh script directly (discouraged)
+./create_db.sh -h <host> -p <password> -d <dbname> -s <ssh_username> -P <ssh_password> [-u <username>]
 ```
 
 ### 2. Create the database with a docker container
@@ -46,6 +35,3 @@ docker-compose up -d
 You can use the adminer container to run further queries if you'd like. Open the adminer interface in your browser at `http://localhost:5050` and login with the the following credentials:
 
 - admin: admin
-
-
-

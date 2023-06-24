@@ -12,6 +12,8 @@ class Config(BaseSettings):
 
     LOG_LEVEL: str = "DEBUG"
 
+    PG_PASSWORD: str
+    SSH_PASSWORD: str
     DB_CONNECTION_STRING: str
 
     DEFAULT_ROUTINE_FILES = [

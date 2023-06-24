@@ -1,5 +1,5 @@
-from loguru import logger
 import typer
+from loguru import logger
 
 import util
 from config.env import BASE_DIR
@@ -11,6 +11,7 @@ init_cli = typer.Typer()
 
 @init_cli.command()
 def schema(file: str = f"{BASE_DIR}/sql/schema.sql") -> None:
+    """Create the schema for the database using the given sql file"""
     session = get_db_session()
 
     with open(file, "r") as f:
@@ -27,6 +28,7 @@ def routines(
     base_path: str = f"{BASE_DIR}/sql/routines",
     names: str = str(config.DEFAULT_ROUTINE_FILES),
 ) -> None:
+    """Create the routines/functions for the database using the given sql files"""
     session = get_db_session()
 
     file_names = names.split(",")

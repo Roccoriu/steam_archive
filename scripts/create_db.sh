@@ -109,7 +109,7 @@ ssh -t ${SSHUSER}@${HOST} <<EOF
 
     # Check if the database already exists
     if ! psql -lqt | cut -d \| -f 1 | grep -w ${DB}; then
-        psql -c "CREATE DATABASE ${DB}
+        psql -qc "CREATE DATABASE ${DB}
                     WITH
                     OWNER = postgres
                     ENCODING = 'UTF8'
@@ -119,7 +119,7 @@ ssh -t ${SSHUSER}@${HOST} <<EOF
                     CONNECTION LIMIT = -1
                     IS_TEMPLATE = False;"
 
-        psql -d ${DB} -c "${SQL_STMT}"
+        psql -qd ${DB} -c "${SQL_STMT}"
     fi
 EOF
 

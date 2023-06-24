@@ -8,11 +8,11 @@ from config.db import get_db_session
 from config.env import BASE_DIR
 
 
-seed_cli = typer.Typer()
+data_cli = typer.Typer()
 
 
-@seed_cli.command()
-def data(input_file: str = f"{BASE_DIR}/data/survey_data_combined.json") -> None:
+@data_cli.command()
+def seed(input_file: str = f"{BASE_DIR}/data/survey_data_combined.json") -> None:
     """
     Seed the database with data from a JSON file. The default file is
     `data/survey_data_combined.json`. --input-file can be used to specify a
