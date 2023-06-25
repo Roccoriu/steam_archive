@@ -3,18 +3,18 @@ import re
 
 def parse_os(os_version: list[str]) -> str:
     if "Mint" in os_version:
-        return f"{os_version[0]} {os_version[1]}"
+        return f"{os_version[0]} {os_version[1]}".strip()
 
     if "NAME=" in os_version[0]:
-        return os_version[0].split("=")[1].strip('"')
+        return os_version[0].split("=")[1].strip('"').strip()
 
-    return os_version[0].strip('"')
+    return os_version[0].strip('"').strip()
 
 
 def parse_os_version(vals: list[str]) -> str:
     return next(
         (
-            s
+            s.strip()
             for s in vals
             if (s and s[0].isdigit() or s == "XP" or s == "Vista")
             and s != "64"

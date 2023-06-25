@@ -122,3 +122,7 @@ CREATE TABLE IF NOT EXISTS steam.Hw_Survey_Cpu_Count
         ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+CREATE INDEX IF NOT EXISTS hw_survey_ram_config_percentage_idx ON steam.Hw_Survey_Ram_Configuration (percentage);
+CREATE INDEX IF NOT EXISTS hw_survey_gpu_config_percentage_idx ON steam.Hw_Survey_Gpu_Config (percentage);
+CREATE INDEX IF NOT EXISTS hw_survey_os_version_percentage_idx ON steam.Hw_Survey_Os_Version (percentage);
+CREATE INDEX IF NOT EXISTS hw_survey_cpu_count_percentage_idx ON steam.Hw_Survey_Cpu_Count (percentage);

@@ -10,17 +10,23 @@ init_cli = typer.Typer()
 
 
 @init_cli.command()
-def schema(file: str = f"{BASE_DIR}/sql/schema.sql") -> None:
+def schema(
+    schema_file: str = f"{BASE_DIR}/sql/schema.sql",
+    view_file: str = f"{BASE_DIR}/sql/views.sql",
+) -> None:
     """Create the schema for the database using the given sql file"""
     session = get_db_session()
 
-    with open(file, "r") as f:
+    with open(schema_file, "r") as f:
         stmts = f.read().split(";")
+
+    with open(view_file, "r") as f:
+        stmts += f.read().split(";")
 
     for stmt in stmts:
         util.exec_sql(session, stmt)
 
-    logger.info(f"Successfully executed {len(stmts)} statements from {file}")
+    logger.info(f"Successfully executed {len(stmts)} statements from {schema_file}")
 
 
 @init_cli.command()
@@ -42,17 +48,6 @@ def routines(
 
 
 @init_cli.command()
-def views(
-    base_path: str = f"{BASE_DIR}/sql/views",
-    names: str = str(config.DEFAULT_VIEW_FILES),
-) -> None:
-    session = get_db_session()
-
-    pass
-
-
-@init_cli.command()
 def all() -> None:
     schema()
     routines()
-    views()

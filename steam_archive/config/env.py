@@ -25,14 +25,8 @@ class Config(BaseSettings):
         "upsert_ram_config.sql",
     ]
 
-    DEFAULT_VIEW_FILES = []
-
     @validator("DEFAULT_ROUTINE_FILES")
     def validate_default_route_files(cls, v) -> str:
-        return ",".join(v)
-
-    @validator("DEFAULT_VIEW_FILES")
-    def validate_default_views_files(cls, v) -> str:
         return ",".join(v)
 
 
